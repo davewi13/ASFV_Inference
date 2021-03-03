@@ -1,9 +1,6 @@
 # Set number of chains you have run
 nchains <- 50
 
-# Load in information about the priors used for annotating plots
-source('./guinatPriors.R')
-
 # Set the working directory
 setwd("./results.R")
 
