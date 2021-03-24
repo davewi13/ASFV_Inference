@@ -5,3 +5,5 @@ This file calls either the MCMCfunc_combinedherds.R or the MCMCfunc_separateherd
 These functions require the C++ loglikelihood_rjmcmc_.cpp files (for calculating the log likelihood, updating proposed exposure/infection times and updating parameter values), the initFunc.R file (for proposing initial sets of exposure/infection times), the importHerds.R file (if loading in farm mortality data) and the simulate_data.R and simulate_SEIR.cpp files (if simulating data).
 
 The code to produce Figures 3-6 in the paper is in the produce_figures.R file.
+
+The file ASF_RJMCMC.yml contains the conda environment required to re-run these analyses.
