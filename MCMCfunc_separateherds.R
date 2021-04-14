@@ -2,6 +2,7 @@ MCMCfunc <- function(chain_no,mcmc.size,burn_in,thinning,t_upd,simulated,results
   # Function to run RJ MCMC chains fitting latent and infectious parameters for each herd
   # Code is very similar to the code for combined herds, so only comment where there are differences  
   
+  set.seed(chain_no) # Note that when simulating data the seed needs to be set after the simulation.
   source('./initFunc.R')
   library(Rcpp)
   sourceCpp("./loglikelihood_rjmcmc_separateherds_twobetas_freq_dep.cpp")
@@ -14,7 +15,6 @@ MCMCfunc <- function(chain_no,mcmc.size,burn_in,thinning,t_upd,simulated,results
   } else {
     source('./importHerds.R')
   }
-  set.seed(chain_no)
   
   # Reserve space for the MCMC output (more space here as more parameters)
   mcmc.samples           <- matrix(0,(mcmc.size-burn_in)/thinning+1,60) 
