@@ -43,7 +43,7 @@ MCMCfunc <- function(chain_no,mcmc.size,burn_in,thinning,t_upd,simulated,results
   colnames(mcmc.samples) <- c("beta1_ext","beta2_ext","beta3_ext","beta4_ext","beta5_ext","beta6_ext","beta7_ext","beta8_ext","beta9_ext","beta1_int","beta2_int","beta3_int","beta4_int","beta5_int","beta6_int","beta7_int","beta8_int","beta9_int","exp_mean","exp_shape","inf_mean","inf_shape","accept_exp_mean","accept_exp_shape","accept_inf_mean","accept_inf_shape","accept_beta_int","accept_beta_ext")
   
   # Initialize the model unknowns
-  beta_ext_vec <- rep(0,9)
+  beta_ext_vec <- rep(0.001,9)
   beta_int_vec <- rep(1,9)
   beta_int_shape <- 2
   beta_ext_shape <- 1
