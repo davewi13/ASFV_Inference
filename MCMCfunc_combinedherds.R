@@ -15,6 +15,7 @@ MCMCfunc <- function(chain_no,mcmc.size,burn_in,thinning,t_upd,simulated,results
 # thinning - value of any thinning parameter
 # priors - information about the priors used
     
+  set.seed(chain_no) # Note, if simulating data the seed needs set after the data has been simulated
   # Load function to propose an initial set of times
   source('./initFunc.R')
   # Load Rcpp library
@@ -35,7 +36,6 @@ MCMCfunc <- function(chain_no,mcmc.size,burn_in,thinning,t_upd,simulated,results
     # If using real data, just load it in
     source('./importHerds.R')
   }
-  set.seed(chain_no)
   
   # Reserve space for the MCMC output
   mcmc.samples           <- matrix(0,(mcmc.size-burn_in)/thinning+1,28) 
