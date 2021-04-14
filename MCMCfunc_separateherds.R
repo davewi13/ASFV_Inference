@@ -22,7 +22,7 @@ MCMCfunc <- function(chain_no,mcmc.size,burn_in,thinning,t_upd,simulated,results
   colnames(mcmc.samples) <- c("beta1_ext","beta2_ext","beta3_ext","beta4_ext","beta5_ext","beta6_ext","beta7_ext","beta8_ext","beta9_ext","beta1_int","beta2_int","beta3_int","beta4_int","beta5_int","beta6_int","beta7_int","beta8_int","beta9_int","exp_mean1","exp_mean2","exp_mean3","exp_mean4","exp_mean5","exp_mean6","exp_mean7","exp_mean8","exp_mean9","exp_shape1","exp_shape2","exp_shape3","exp_shape4","exp_shape5","exp_shape6","exp_shape7","exp_shape8","exp_shape9","inf_mean1","inf_mean2","inf_mean3","inf_mean4","inf_mean5","inf_mean6","inf_mean7","inf_mean8","inf_mean9","inf_shape1","inf_shape2","inf_shape3","inf_shape4","inf_shape5","inf_shape6","inf_shape7","inf_shape8","inf_shape9","accept_exp_mean","accept_exp_shape","accept_inf_mean","accept_inf_shape","accept_beta_int","accept_beta_ext")
   
   # Now have vectors for latent and infectious mean parameters instead of single values
-  beta_ext_vec <- rep(0,9)
+  beta_ext_vec <- rep(0.001,9)
   beta_int_vec <- rep(1,9)
   beta_int_shape <- 2
   beta_ext_shape <- 1
